@@ -1,0 +1,21 @@
+#about-me{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 50px;
+}
+#image-div{
+
+}
+#content-div h1{
+  margin-top: 0px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+img{
+  width: 100%;
+}
+@media only screen and (min-width: 768px){
+  #about-me{
+    grid-template-columns: 40% auto;
+  }
+}
