@@ -190,11 +190,14 @@
     </div>
   </div>
 </footer>
-<script src="https://kit.fontawesome.com/16df088500.js" crossorigin="anonymous"></script>
 <script>
   // Open the Modal
   function openModal() {
     document.getElementById("myModal").style.display = "block";
+    document.getElementById("image-controls").classList.add("active");
+    setTimeout(function(){
+      document.getElementById("image-controls").classList.remove("active");
+    }, 300);
   }
 
   // Close the Modal
@@ -231,5 +234,3 @@
     dots[slideIndex-1].className += " active";
   }
 </script>
-</body>
-</html>

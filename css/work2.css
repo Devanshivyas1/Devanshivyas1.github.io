@@ -40,7 +40,7 @@
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 70px;
+  padding-top: 50px;
   left: 0;
   top: 0;
   width: 100%;
@@ -109,8 +109,9 @@
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  z-index: 10;
+  z-index: 20;
   -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Position the "next button" to the right */
@@ -134,13 +135,16 @@
   top: -30px;
 }
 #image-controls{
+  position: static;
   width: 100%;
   display: flex;
   padding: 5px;
   background: white;
   grid-gap: 5px;
   overflow: auto;
+  opacity: 1;
   box-sizing: border-box;
+  transition: opacity 0.3s ease;
 }
 .column{
   /* width: 33.33%;
@@ -179,7 +183,7 @@ img.demo {
 
 /* Handle on hover */
 .modal-content::-webkit-scrollbar-thumb:hover {
-  background: #fff;
+  background: #000;
 }
 
 @media only screen and (min-width: 992px){
@@ -187,11 +191,23 @@ img.demo {
     flex: 33.33%;
     max-width: 33.33%;
   }
+  .mySlides img{
+    height: calc(100vh - 120px);
+  }
+
   .image-box img{
     height: 250px;
   }
   .column{
     /* flex: 25%;
     width: 25%; */
+  }
+  #image-controls{
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+  }
+  #image-controls.active, #image-controls:hover{
+    opacity: 1;
   }
 }
