@@ -6,6 +6,7 @@
 #flexbox{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .image-a{
   flex: 100%;
@@ -187,8 +188,8 @@ img.demo {
 
 @media only screen and (min-width: 992px){
   .image-a{
-    flex: 33.33%;
-    max-width: 33.33%;
+    flex: 25%;
+    max-width: 25%;
   }
   .mySlides img{
     height: calc(100vh - 120px);
@@ -217,3 +218,4 @@ img.demo {
   #image-controls.active, #image-controls:hover{
     opacity: 1;
   }
+}
