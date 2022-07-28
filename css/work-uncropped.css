@@ -6,6 +6,7 @@
 #flexbox{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .image-a{
   flex: 100%;
